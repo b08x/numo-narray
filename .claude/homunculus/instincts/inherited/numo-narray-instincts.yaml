@@ -1,0 +1,548 @@
+# Instincts generated from https://github.com/b08x/numo-narray
+# Generated: 2026-05-27T23:03:07.987Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: numo-narray-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/b08x/numo-narray
+---
+
+# Numo Narray Commit Length
+
+## Action
+
+Keep commit messages concise (~39 characters)
+
+## Evidence
+
+- Average commit message length: 39 chars
+- Based on 34 commits
+
+---
+id: numo-narray-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/numo-narray
+---
+
+# Numo Narray Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: numo-narray-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/numo-narray
+---
+
+# Numo Narray Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: numo-narray-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/numo-narray
+---
+
+# Numo Narray Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: numo-narray-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/b08x/numo-narray
+---
+
+# Numo Narray Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: numo-narray-workflow-ci-workflow-update
+trigger: "when doing ci workflow update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/b08x/numo-narray
+---
+
+# Numo Narray Workflow Ci Workflow Update
+
+## Action
+
+Follow the ci-workflow-update workflow:
+1. Edit .github/workflows/build.yml to add or update jobs, runners, or steps.
+2. Optionally update related files (e.g., numo-narray.gemspec) if dependency or Ruby version changes are involved.
+3. Commit and push changes.
+4. Merge pull request if applicable.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .github/workflows/build.yml, numo-narray.gemspec
+
+---
+id: numo-narray-workflow-feature-or-bugfix-with-test
+trigger: "when doing feature or bugfix with test"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/b08x/numo-narray
+---
+
+# Numo Narray Workflow Feature Or Bugfix With Test
+
+## Action
+
+Follow the feature-or-bugfix-with-test workflow:
+1. Edit or add implementation in ext/numo/narray/numo/types/*.h or related C files.
+2. Update or add tests in test/*.rb.
+3. Commit and push changes.
+4. Merge pull request if applicable.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: ext/numo/narray/numo/types/*.h, test/*.rb
+
+---
+id: numo-narray-workflow-bulk-typo-or-doc-fix
+trigger: "when doing bulk typo or doc fix"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/b08x/numo-narray
+---
+
+# Numo Narray Workflow Bulk Typo Or Doc Fix
+
+## Action
+
+Follow the bulk-typo-or-doc-fix workflow:
+1. Edit source files, documentation, and comments to fix typos or clarify language.
+2. Commit and push changes.
+3. Merge pull request if applicable.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: ext/numo/narray/**/*.c, ext/numo/narray/**/*.h, ext/numo/narray/gen/**/*.c
+
+---
+id: numo-narray-workflow-test-fix-or-enhancement
+trigger: "when doing test fix or enhancement"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/b08x/numo-narray
+---
+
+# Numo Narray Workflow Test Fix Or Enhancement
+
+## Action
+
+Follow the test-fix-or-enhancement workflow:
+1. Edit test/*.rb files to fix or enhance tests.
+2. Commit and push changes.
+3. Merge pull request if applicable.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: test/*.rb
+
+---
+id: numo-narray-workflow-c-extension-bulk-refactor-or-fix
+trigger: "when doing c extension bulk refactor or fix"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/b08x/numo-narray
+---
+
+# Numo Narray Workflow C Extension Bulk Refactor Or Fix
+
+## Action
+
+Follow the c-extension-bulk-refactor-or-fix workflow:
+1. Edit multiple files in ext/numo/narray/ and subdirectories.
+2. Commit and push changes.
+3. Merge pull request if applicable.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: ext/numo/narray/**/*.c, ext/numo/narray/**/*.h
+
+---
+id: numo-narray-instinct-file-naming
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct File Naming
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files
+- lib/numo/narray/*.rb
+
+---
+id: numo-narray-instinct-function-naming
+trigger: "When defining a new function or method"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Function Naming
+
+## Action
+
+Use camelCase for function and method names
+
+## Evidence
+
+- Pattern in namingConventions.functions
+- lib/numo/narray/*.rb
+
+---
+id: numo-narray-instinct-class-naming
+trigger: "When defining a new class or module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Class Naming
+
+## Action
+
+Use PascalCase for class and module names
+
+## Evidence
+
+- Pattern in namingConventions.classes
+- lib/numo/narray/*.rb
+
+---
+id: numo-narray-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constants
+
+## Evidence
+
+- Pattern in namingConventions.constants
+- lib/numo/narray/*.rb
+
+---
+id: numo-narray-instinct-import-style
+trigger: "When importing modules or files in Ruby code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle
+- lib/numo/narray/*.rb
+
+---
+id: numo-narray-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle
+- lib/numo/narray/*.rb
+
+---
+id: numo-narray-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Test Location
+
+## Action
+
+Place test files in the separate 'test/' directory
+
+## Evidence
+
+- Pattern in testLocation
+- test/*.rb
+
+---
+id: numo-narray-instinct-test-coverage
+trigger: "When implementing a new feature or bugfix"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Test Coverage
+
+## Action
+
+Add or update corresponding tests in test/*.rb
+
+## Evidence
+
+- feature-or-bugfix-with-test workflow
+- Commits like 'Add tests on Fedora'
+
+---
+id: numo-narray-instinct-test-enhancement
+trigger: "When improving or fixing test logic"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Test Enhancement
+
+## Action
+
+Edit test/*.rb files to enhance coverage or fix assertions
+
+## Evidence
+
+- test-fix-or-enhancement workflow
+- Commits like 'Fix failure with Ruby 3.3'
+
+---
+id: numo-narray-instinct-commit-format-freeform
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Commit Format Freeform
+
+## Action
+
+Use a concise, imperative, freeform message without a prefix
+
+## Evidence
+
+- Pattern in commits.type
+- Examples: 'Allow convert nil to NaN in Numo::DFloat.cast'
+
+---
+id: numo-narray-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Commit Length
+
+## Action
+
+Keep the commit message short (average ~39 characters)
+
+## Evidence
+
+- Pattern in commits.averageLength
+- Examples: 'Remove bundler installation'
+
+---
+id: numo-narray-instinct-ci-workflow-update
+trigger: "When updating CI configuration or fixing CI-related issues"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Ci Workflow Update
+
+## Action
+
+Edit .github/workflows/build.yml (and optionally numo-narray.gemspec), then commit and push changes
+
+## Evidence
+
+- ci-workflow-update workflow
+- Commits: 'Update actions/checkout to v4', 'Add Ruby 3.2 and 3.3 in CI'
+
+---
+id: numo-narray-instinct-feature-or-bugfix-with-test
+trigger: "When adding a new feature or fixing a bug in the core library"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Feature Or Bugfix With Test
+
+## Action
+
+Edit ext/numo/narray/numo/types/*.h or related C files and update/add tests in test/*.rb
+
+## Evidence
+
+- feature-or-bugfix-with-test workflow
+- Commits: 'Allow convert nil to NaN in Numo::DFloat.cast'
+
+---
+id: numo-narray-instinct-bulk-typo-or-doc-fix
+trigger: "When cleaning up spelling, comments, or documentation inconsistencies"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Bulk Typo Or Doc Fix
+
+## Action
+
+Edit source files and documentation to fix typos or clarify language
+
+## Evidence
+
+- bulk-typo-or-doc-fix workflow
+- Pattern in doc/*.md, ToDo.md
+
+---
+id: numo-narray-instinct-test-fix-or-enhancement
+trigger: "When fixing or enhancing test logic or coverage"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct Test Fix Or Enhancement
+
+## Action
+
+Edit test/*.rb files and commit the changes
+
+## Evidence
+
+- test-fix-or-enhancement workflow
+- Commits: 'Fix failure with Ruby 3.3'
+
+---
+id: numo-narray-instinct-c-extension-bulk-refactor-or-fix
+trigger: "When modernizing, refactoring, or fixing multiple C extension source files"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: b08x/numo-narray
+---
+
+# Numo Narray Instinct C Extension Bulk Refactor Or Fix
+
+## Action
+
+Edit multiple files in ext/numo/narray/**/*.c and ext/numo/narray/**/*.h, then commit and push changes
+
+## Evidence
+
+- c-extension-bulk-refactor-or-fix workflow
+- Pattern in ext/numo/narray/**/*.c
+
